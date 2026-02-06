@@ -2,7 +2,7 @@ name: Update Weather in README
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 15 * * *"
   workflow_dispatch:
 
 permissions:
