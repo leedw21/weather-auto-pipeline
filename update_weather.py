@@ -20,7 +20,6 @@ def get_weather_emoji(weather_id):
     return "🌡️"
 
 def get_weather_advice(weather_id):
-    # 날씨 ID에 따른 맞춤형 멘트
     if 200 <= weather_id <= 232: return "천둥 번개가 쳐요! 🌩️ 외출을 자제하고 안전한 실내에 계세요."
     if 300 <= weather_id <= 531: return "비가 내려요. ☔ 튼튼한 우산 꼭 챙기시고 빗길 운전 조심하세요!"
     if 600 <= weather_id <= 622: return "눈이 내려요. ☃️ 옷 따뜻하게 챙겨 입으시고 빙판길 조심하세요!"
@@ -41,7 +40,6 @@ def get_weather():
 def update_readme():
     data = get_weather()
     
-    # 한국 시간(KST)
     kst_now = datetime.utcnow() + timedelta(hours=9)
     formatted_time = kst_now.strftime("%Y년 %m월 %d일 %p %I:%M (KST)")
 
@@ -72,7 +70,7 @@ def update_readme():
 </div>
 
 ---
-*이 정보는 GitHub Actions 봇이 5분마다 서산을 바라보며 갱신합니다.*
+*이 정보는 GitHub Actions 봇이 매 시간 정각에 서산을 바라보며 갱신합니다.*
 """
     else:
         readme_content = f"""# 🏡 내 고향 서산 날씨 알리미
