@@ -2,7 +2,7 @@ name: Update Weather in README
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # 5분마다(과제 샘플대로)
+    - cron: "* * * * *"   # 5분마다(과제 샘플대로)
   push:
     branches: [ "main" ]
   workflow_dispatch:
